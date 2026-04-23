@@ -9,3 +9,4 @@ if (password === "phanh123") {
   alert("what the helly");
   window.location.reload(); 
 }
+
