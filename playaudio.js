@@ -2,5 +2,10 @@ const btn = document.getElementById('music');
 const audio = document.getElementById('bg-music');
 
 btn.addEventListener('click', () => {
-  audio.play();
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
 });
+
