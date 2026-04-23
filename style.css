@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #FAFBF6;
+    letter-spacing: -0.02em;
+    font-size: 12pt;
+}
+
+body::after {
+    content: url('assets/folder-hover.svg');
+    display: none;
+ }
+
+nav {
+    padding: 40pt;
+    font-size: 14pt;
+}
+nav .nav-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row; 
+    gap: 12px;
+    justify-content: center;
+}
+
+nav .nav-bar .nav-tab a {
+    text-decoration: none;
+    color: #000000; /* Inherits color from the parent instead of the default blue */
+}
+nav .nav-bar .breadcrumb {
+    color: #A7A7A7;
+}
+
+nav .nav-bar .breadcrumb a {
+    color: #A7A7A7;
+}
+
+.main {
+    display: flex;
+    justify-content: center; /* Horizontal Auto Layout center */
+    align-items: center;     /* Vertical Auto Layout center */
+  
+    width: 100%;             /* Full width of the screen */
+    height: calc(100vh -  200px);           /* Full height of the screen */
+    gap: 12pt;
+}
+
+.folder-button {
+   
+    display: flex;
+    flex-direction: column; 
+    
+    /* 2. Alignment */
+    align-items: center; /* Horizontally centers the items */
+    justify-content: center; /* Vertically centers the items inside the box */
+    
+    /* 3. The "Gap" */
+    gap: 8px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(0);
+  }
+
+.folder-button:hover {
+    transform: translateY(-12px);
+}
+
+.folder-button .icon {
+    width: 96px;
+    height: 96px;
+    /* Set the default icon */
+    background-image: url('assets/folder.svg');
+  }
+
+.folder-button .icon:hover {
+    background-image: url('assets/folder-hover.svg');
+}
+
+.folder-button-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* for the galleries */
+.gallery-container {
+    /* 1. The "Auto Layout" Trigger */
+    display: flex;
+    
+    /* 2. Top-Middle Alignment */
+    justify-content: center; /* Horizontally center (Middle) */
+    align-items: flex-start; /* Vertically align to top */
+    
+    /* 3. Wrap logic (so it doesn't overflow horizontally) */
+    flex-wrap: wrap;
+    
+    /* 4. Spacing (The "Gap" in Figma) */
+    gap: 24px; 
+    
+    /* 5. The requested 40px Padding */
+    padding: 40px;
+    
+    /* Ensure it fills the area below your nav */
+    min-height: calc(100vh - 54px); 
+    width: 100%;
+    box-sizing: border-box; /* Crucial: keeps padding inside the width */
+  }
+
+  #music {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Adjust this gap to match your Figma padding variables */
+    gap: 12px; 
+  }
+  
+  /* Scaling the main icon */
+  .main-icon {
+    width: 32px; 
+    height: auto;
+  }
+
+  .music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .play-icon {
+    transition: transform 0.3s ease;
+  }
+
+  .play-icon:hover {
+    transform: scale(1.1);
+  }
+
+  .gallery-item {
+    transition: transform 0.3s ease;
+    transform: translateY(0px);
+  }
+
+  .gallery-item:hover {
+    transform: translateY(-8px);
+  }
