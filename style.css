@@ -76,6 +76,18 @@ nav .nav-bar .breadcrumb a {
     background-image: url('assets/folder.svg');
   }
 
+.folder-button .icon-red {
+    width: 96px;
+    height: 96px;
+    /* Set the default icon */
+    background-image: url('assets/folder-red.svg');
+  }
+
+.folder-button .icon-red:hover {
+    background-image: url('assets/folder-red-over.png');
+  }
+
+
 .folder-button .icon:hover {
     background-image: url('assets/folder-hover.svg');
 }
