@@ -107,15 +107,16 @@ nav .nav-bar .breadcrumb a {
   /* 2. Top-Middle Alignment */
   justify-content: center; /* Horizontally center (Middle) */
   align-items: flex-start; /* Vertically align to top */
+  align-content: center;
   
   /* 3. Wrap logic (so it doesn't overflow horizontally) */
   flex-wrap: wrap;
   
   /* 4. Spacing (The "Gap" in Figma) */
-  gap: 24px; 
+  gap: 80px; 
   
   /* 5. The requested 40px Padding */
-  padding: 40px;
+  padding: 80px;
   
   /* Ensure it fills the area below your nav */
   min-height: calc(100vh - 54px); 
@@ -162,6 +163,7 @@ nav .nav-bar .breadcrumb a {
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.025));   
     transition: transform 0.3s ease;
     transform: translateY(0px);
+    width: 250px;
   }
 
   .gallery-item:hover {
