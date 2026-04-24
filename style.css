@@ -42,9 +42,10 @@ nav .nav-bar .breadcrumb a {
 .main {
   display: flex;
   justify-content: center; /* Horizontal Auto Layout center */
-  align-items: center;     /* Vertical Auto Layout center */            /* Full width of the screen */
+  align-items: center;     /* Vertical Auto Layout center */            
+  align-content: center;
   height: calc(100vh -  200px);           /* Full height of the screen */
-  gap: 12pt;
+  gap: 20px;
   flex-wrap: wrap;
   padding: 40px;
 
