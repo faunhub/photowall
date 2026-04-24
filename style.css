@@ -181,6 +181,7 @@ nav .nav-bar .breadcrumb a {
   }
 
 .text-modal {
+  margin: 20px;
   background: white;
   padding: 40px;
   max-width: 400px;
