@@ -14,10 +14,22 @@
             <li class="nav-tab breadcrumb">/</li>
             <li class="nav-tab breadcrumb"><a href="/places.html">places</a></li>
             <li class="nav-tab breadcrumb">/</li>
-            <li class="nav-tab"><a href="/grad.html">misc</a></li>
+            <li class="nav-tab"><a href="/grad.html">grad</a></li>
           </ul>
     </nav>
-    <div class="pending">
-        Adding pics...
+    <section class="gallery-container">
+        <img src="photos/grad/Polaroid Frame.avif" alt="Grad 1" class="gallery-item text-trigger"
+        data-content="happy grad">
+        <img src="photos/grad/Polaroid Frame-1.avif" alt="Grad 2" class="gallery-item">
+        <img src="photos/grad/Polaroid Frame-2.avif" alt="Grad 3" class="gallery-item">
+    </section>
+    <audio id="hover-sound" src="assets/sfx/paper-flip.wav" preload="auto"></audio>
+    <script src="playSFX.js"></script>
+    <div id="text-overlay" class="overlay">
+        <div class="text-modal">
+            <span class="close-text">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
+     <script src="overlayText.js"></script>
 </body>

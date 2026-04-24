@@ -2,125 +2,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 body {
-    font-family: "Inter", sans-serif;
-    background-color: #FAFBF6;
-    letter-spacing: -0.02em;
-    font-size: 12pt;
+  font-family: "Inter", sans-serif;
+  background-color: #FAFBF6;
+  letter-spacing: -0.02em;
+  font-size: 12pt;
 }
 
 body::after {
-    content: url('assets/folder-hover.svg');
-    display: none;
+  content: url('assets/folder-hover.svg');
+  display: none;
  }
 
 nav {
-    padding: 40pt;
-    font-size: 14pt;
+  padding: 40pt;
+  font-size: 14pt;
 }
 nav .nav-bar {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: row; 
-    gap: 12px;
-    justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row; 
+  gap: 12px;
+  justify-content: center;
 }
 
 nav .nav-bar .nav-tab a {
-    text-decoration: none;
-    color: #000000; /* Inherits color from the parent instead of the default blue */
+  text-decoration: none;
+  color: #000000; 
 }
 nav .nav-bar .breadcrumb {
-    color: #A7A7A7;
+  color: #A7A7A7;
 }
 
 nav .nav-bar .breadcrumb a {
-    color: #A7A7A7;
+  color: #A7A7A7;
 }
 
 .main {
-    display: flex;
-    justify-content: center; /* Horizontal Auto Layout center */
-    align-items: center;     /* Vertical Auto Layout center */
-  
-    width: 100%;             /* Full width of the screen */
-    height: calc(100vh -  200px);           /* Full height of the screen */
-    gap: 12pt;
+  display: flex;
+  justify-content: center; /* Horizontal Auto Layout center */
+  align-items: center;     /* Vertical Auto Layout center */            /* Full width of the screen */
+  height: calc(100vh -  200px);           /* Full height of the screen */
+  gap: 12pt;
+  flex-wrap: wrap;
+  padding: 40px;
+
 }
 
 .folder-button {
    
-    display: flex;
-    flex-direction: column; 
-    
-    /* 2. Alignment */
-    align-items: center; /* Horizontally centers the items */
-    justify-content: center; /* Vertically centers the items inside the box */
-    
-    /* 3. The "Gap" */
-    gap: 8px;
+  display: flex;
+  flex-direction: column; 
+  /* 2. Alignment */
+  align-items: center; /* Horizontally centers the items */
+  justify-content: center; /* Vertically centers the items inside the box */
+  /* 3. The "Gap" */
+  gap: 8px;
 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
   }
 
 .folder-button:hover {
-    transform: translateY(-12px);
+  transform: translateY(-12px);
 }
 
 .folder-button .icon {
-    width: 96px;
-    height: 96px;
-    /* Set the default icon */
-    background-image: url('assets/folder.svg');
+  width: 96px;
+  height: 96px;
+  /* Set the default icon */
+  background-image: url('assets/folder.svg');
   }
 
 .folder-button .icon-red {
-    width: 96px;
-    height: 96px;
-    /* Set the default icon */
-    background-image: url('assets/folder-red.svg');
+  width: 96px;
+  height: 96px;
+  /* Set the default icon */
+  background-image: url('assets/folder-red.svg');
   }
 
 .folder-button .icon-red:hover {
-    background-image: url('assets/folder-red-hover.svg');
+  background-image: url('assets/folder-red-hover.svg');
   }
 
 
 .folder-button .icon:hover {
-    background-image: url('assets/folder-hover.svg');
+  background-image: url('assets/folder-hover.svg');
 }
 
 .folder-button-link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 
 
 /* for the galleries */
 .gallery-container {
-    /* 1. The "Auto Layout" Trigger */
-    display: flex;
-    
-    /* 2. Top-Middle Alignment */
-    justify-content: center; /* Horizontally center (Middle) */
-    align-items: flex-start; /* Vertically align to top */
-    
-    /* 3. Wrap logic (so it doesn't overflow horizontally) */
-    flex-wrap: wrap;
-    
-    /* 4. Spacing (The "Gap" in Figma) */
-    gap: 24px; 
-    
-    /* 5. The requested 40px Padding */
-    padding: 40px;
-    
-    /* Ensure it fills the area below your nav */
-    min-height: calc(100vh - 54px); 
-    width: 100%;
-    box-sizing: border-box; /* Crucial: keeps padding inside the width */
+  /* 1. The "Auto Layout" Trigger */
+  display: flex;
+  
+  /* 2. Top-Middle Alignment */
+  justify-content: center; /* Horizontally center (Middle) */
+  align-items: flex-start; /* Vertically align to top */
+  
+  /* 3. Wrap logic (so it doesn't overflow horizontally) */
+  flex-wrap: wrap;
+  
+  /* 4. Spacing (The "Gap" in Figma) */
+  gap: 24px; 
+  
+  /* 5. The requested 40px Padding */
+  padding: 40px;
+  
+  /* Ensure it fills the area below your nav */
+  min-height: calc(100vh - 54px); 
+  width: 100%;
+  box-sizing: border-box; /* Crucial: keeps padding inside the width */
   }
 
   #music {
@@ -159,6 +158,7 @@ nav .nav-bar .breadcrumb a {
   }
 
   .gallery-item {
+    filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.025));   
     transition: transform 0.3s ease;
     transform: translateY(0px);
   }
@@ -168,14 +168,49 @@ nav .nav-bar .breadcrumb a {
   }
 
   .pending {
-    font-family: "Permanent Marker", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 32pt;
-    display: flex;
-    justify-content: center; /* Horizontal Auto Layout center */
-    align-items: center;     /* Vertical Auto Layout center */
-  
-    width: 100%;             /* Full width of the screen */
-    height: calc(100vh -  200px);           /* Full height of the screen */
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32pt;
+  display: flex;
+  justify-content: center; /* Horizontal Auto Layout center */
+  align-items: center;     /* Vertical Auto Layout center */
+
+  width: 100%;             /* Full width of the screen */
+  height: calc(100vh -  200px);           /* Full height of the screen */
   }
+
+.text-modal {
+  background: white;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  border-radius: 8px; /* Slight roundness for a premium feel */
+  position: relative;
+  filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.025));   
+  line-height: 1.6;
+  color: #6d6d6d;
+  min-height: 200px;
+}
+
+.close-text {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #999;
+}
+
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark dimming */
+  z-index: 9999; /* Ensures it sits above everything else */
+  justify-content: center;
+  align-items: center;
+}
