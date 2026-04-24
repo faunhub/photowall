@@ -116,7 +116,7 @@ nav .nav-bar .breadcrumb a {
   gap: 80px; 
   
   /* 5. The requested 40px Padding */
-  padding: 80px;
+  padding: 200px;
   
   /* Ensure it fills the area below your nav */
   min-height: calc(100vh - 54px); 
@@ -124,6 +124,16 @@ nav .nav-bar .breadcrumb a {
   box-sizing: border-box; /* Crucial: keeps padding inside the width */
   }
 
+@media (max-width: 800px) {
+  .gallery-container {
+    padding: 40px;
+  }
+}
+@media (min-width: 2400px) {
+  .gallery-container {
+    padding: 300px;
+  }
+}
   #music {
     background: none;
     border: none;
@@ -163,7 +173,7 @@ nav .nav-bar .breadcrumb a {
     filter: drop-shadow(8px 8px 4px rgba(0, 0, 0, 0.025));   
     transition: transform 0.3s ease;
     transform: translateY(0px);
-    width: 250px;
+    width: 275px;
   }
 
   .gallery-item:hover {
@@ -221,4 +231,12 @@ nav .nav-bar .breadcrumb a {
 
 .clickable {
   cursor: pointer;
+  transition: opacity 0.3s ease;
+  display: block;
+}
+
+
+
+.clickable:hover {
+  opacity: 0.7; /* Making the image transparent reveals the black background underneath */
 }
