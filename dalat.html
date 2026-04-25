@@ -17,7 +17,20 @@
             <li class="nav-tab"><a href="/dalat.html">đà lạt</a></li>
           </ul>
     </nav>
-    <div class="pending">
-        Adding pics...
+    <section class="gallery-container">
+        <img src="photos/dalat/Polaroid Frame.avif" alt="Dalat 1" class="gallery-item">
+        <img src="photos/dalat/Polaroid Frame-1.avif" alt="Dalat 2" class="gallery-item">
+        <img src="photos/dalat/Polaroid Frame-2.avif" alt="Dalat 3" class="gallery-item">
+        <img src="photos/dalat/Polaroid Frame-3.avif" alt="Dalat 4" class="gallery-item">
+    </section>
+    
+    <audio id="hover-sound" src="assets/sfx/paper-flip.wav" preload="auto"></audio>
+    <script src="playSFX.js"></script>
+    <div id="text-overlay" class="overlay">
+        <div class="text-modal">
+            <span class="close-text">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
+     <script src="overlayText.js"></script>
 </body>

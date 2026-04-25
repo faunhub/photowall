@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Photowall of Memories | Misc</title>
+    <title>Your Photowall of Memories | misc</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -17,7 +17,68 @@
             <li class="nav-tab"><a href="/misc.html">misc</a></li>
           </ul>
     </nav>
-    <div class="pending">
-        Adding pics...
+
+    <section class="music-container">
+        <button id="music" class="icon-box-link">
+            <div class="icon-box">
+              <img src="assets/radio.svg" id="play-icon" class="play-icon" alt="Play">
+            </div>
+        </button>
+        <audio id="bg-music" src="assets/Backburner.mp3" loop></audio>
+    </section>
+
+    <section class="gallery-container">
+        <img src="photos/misc/Polaroid Frame.avif" alt="misc 1" class="gallery-item text-trigger clickable"
+        data-content="our first pic together probably...">
+        <img src="photos/misc/Polaroid Frame-1.avif" alt="misc 2" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-2.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-3.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-4.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-5.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-6.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="my birthday">
+        <img src="photos/misc/Polaroid Frame-7.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-8.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-9.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-10.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-12.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-13.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-14.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="20/10">
+        <img src="photos/misc/Polaroid Frame-15.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="lần đầu đc ăn mì ý cua ngon nhất sài gòn">
+        <img src="photos/misc/Polaroid Frame-16.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="this is actually my pic of yours in my contact list not the roblox one">
+        <img src="photos/misc/Polaroid Frame-17.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-18.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-19.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-20.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-21.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-22.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-23.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-24.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="the smoking staircase">
+        <img src="photos/misc/Polaroid Frame-25.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="your birthday this year">
+        <img src="photos/misc/Polaroid Frame-26.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="bro dressed like me">
+        <img src="photos/misc/Polaroid Frame-27.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="i kinda liked it when u had to take chinese classes">
+        <img src="photos/misc/Polaroid Frame-28.avif" alt="misc 3" class="gallery-item">
+        <img src="photos/misc/Polaroid Frame-29.avif" alt="misc 3" class="gallery-item text-trigger clickable"
+        data-content="bro dressed like me again">
+    </section>
+
+    <div id="text-overlay" class="overlay">
+        <div class="text-modal">
+            <span class="close-text">&times;</span>
+            <div id="modal-body"></div>
+        </div>
     </div>
+     <script src="overlayText.js"></script>
+
+    <audio id="hover-sound" src="assets/sfx/paper-flip.wav" preload="auto"></audio>
+    <script src="playSFX.js"></script>
+
+    <script src="playaudio.js"></script>
 </body>
